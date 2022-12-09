@@ -16,4 +16,27 @@ pipeline{
 				sh "mvn -version"
 			}
 		}
-    }}
+        stage ("Suppression du dossier tareget + Copie du livrable dans le Repository local"){
+			steps{
+				sh "mvn clean install"
+			}
+			
+		}
+		stage("Compile"){
+                    steps {
+                        sh 'mvn compile -DskipTests'
+                    }
+                }
+        stage ('Lancement des Tests Unitaires...'){
+			steps{
+				sh "mvn test"
+			}
+		}
+		stage ('Création du livrable dans target'){
+			steps{
+				sh "mvn package"
+
+			}
+		}
+    }
+    }
