@@ -38,5 +38,14 @@ pipeline{
 
 			}
 		}
+		stage ('Analyse avec Sonar...'){
+			steps{
+			script{
+			withSonarQubeEnv(installationName: 'sonar'){
+				sh "mvn sonar:sonar"
+				    }
+				}
+			}
+		}
     }
     }
