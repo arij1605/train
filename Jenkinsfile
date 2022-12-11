@@ -47,5 +47,10 @@ pipeline{
 				}
 			}
 		}
+		stage ('Deploiement dans Nexux...'){
+			steps{
+				sh "mvn deploy"
+			}
+		}
     }
     }
