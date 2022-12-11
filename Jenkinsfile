@@ -1,4 +1,9 @@
 pipeline{
+	environment{
+		registry = 'arijncibi/ExamThourayaS2'
+		registryCredential= 'dockerId'
+		dockerImage = ''
+	}
 	
 	agent any 
 	stages{
@@ -50,6 +55,23 @@ pipeline{
 		stage ('Deploiement dans Nexux...'){
 			steps{
 				sh "mvn deploy"
+			}
+		}
+		stage('Building our image...'){
+			steps{ 
+				script{ 
+					dockerImage= docker.build registry + ":$BUILD_NUMBER" 
+				}
+			}
+		}
+
+		stage('Deploy our image...'){
+			steps{ 
+				script{
+					docker.withRegistry( '', registryCredential){
+						dockerImage.push()
+					} 
+				} 
 			}
 		}
     }
