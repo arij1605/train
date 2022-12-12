@@ -1,6 +1,6 @@
 pipeline{
 	environment{
-		registry = 'arijncibi/ExamThourayaS2'
+		registry = 'arijncibi/devops'
 		registryCredential= 'dockerId'
 		dockerImage = ''
 	}
