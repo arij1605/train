@@ -52,7 +52,7 @@ public class TrainTest  {
         Assertions.assertNotNull(trainq);
     }*/
     @Test
-    void testRetrieveAllProduit() {
+    void testRetrieveAllTrain() {
 
         List<Train> trains = new ArrayList();
         trains.add(new Train());
@@ -71,7 +71,7 @@ public class TrainTest  {
 
 
         when(trainRepository.save(isA(Train.class))).thenAnswer(invocation -> (Train) invocation.getArguments()[0]);
-        Train returnedObj = trainService.ajouterTrain();
+        Train returnedObj = trainService.ajouterTrain(obj);
         ArgumentCaptor<Train> savedObjectArgument = ArgumentCaptor.forClass(Train.class);
         verify(trainRepository, times(1)).save(savedObjectArgument.capture());
         verifyNoMoreInteractions(trainRepository);
@@ -80,13 +80,14 @@ public class TrainTest  {
         Assertions.assertNotNull(savedRestObject);
 
     }
+    
 
    /*  @Test
     void testDeleteObject() {
-        Train produite = new Train();
-        produite.setLibelleTrain("new test");
-        produite.setIdTrain(1L);
-        when(trainRepository.findById(produite.getIdTrain())).thenReturn(Optional.of(produite));
+        Train train = new Train();
+        train.setLibelleTrain("new test");
+        train.setIdTrain(1L);
+        when(trainRepository.findById(train.getIdTrain())).thenReturn(Optional.of(train));
         Train trainq = trainService.retrieveTrain(1L);
         trainService.deleteTrain(trainq.getIdTrain());
         verify(trainRepository).deleteById(trainq.getIdTrain());

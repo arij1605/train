@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public interface IVoyageurService {
-    void ajouterVoyageur(Voyageur Voyageur);
+    Voyage ajouterVoyageur(Voyageur Voyageur);
     //Modifier le voyageur
     void modifierVoyageur(Voyageur voyageur);
     List<Voyageur> recupererAll();

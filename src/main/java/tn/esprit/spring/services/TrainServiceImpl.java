@@ -40,9 +40,10 @@ public class TrainServiceImpl implements ITrainService {
     VoyageRepository voyageRepository;
 
 
-    public void ajouterTrain(Train t) {
+    public Train ajouterTrain(Train t) {
 
         trainRepository.save(t);
+        return t;
     }
 
     public int TrainPlacesLibres(Ville nomGareDepart) {
