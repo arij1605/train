@@ -6,7 +6,6 @@ import tn.esprit.spring.repository.VoyageRepository;
 import tn.esprit.spring.services.IVoyageService;
 import tn.esprit.spring.services.VoyageServiceImpl;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
