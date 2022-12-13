@@ -1,4 +1,4 @@
-/*
+
 package tn.esprit.spring;
 
 import tn.esprit.spring.entities.Train;
@@ -65,7 +65,7 @@ public class TrainTest  {
 
 
 
- /*   @Test
+    @Test
     void testCreateNewObject() {
         Train obj = new Train(1,etatTrain.prevu,1);
 
@@ -93,4 +93,4 @@ public class TrainTest  {
         verify(trainRepository).deleteById(trainq.getIdTrain());
     } */
 
-//}
+}

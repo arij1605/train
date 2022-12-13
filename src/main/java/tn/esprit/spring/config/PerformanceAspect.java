@@ -1,6 +1,7 @@
 package tn.esprit.spring.config;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
+@Slf4j
 public class PerformanceAspect {
 	
 

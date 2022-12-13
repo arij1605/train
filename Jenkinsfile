@@ -39,7 +39,7 @@ pipeline{
 		}
 		stage ('Création du livrable dans target'){
 			steps{
-				sh "mvn package"
+				sh "mvn package -DskipTests"
 
 			}
 		}

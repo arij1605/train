@@ -1,4 +1,4 @@
-/*package tn.esprit.spring;
+package tn.esprit.spring;
 
 import tn.esprit.spring.entities.Voyage;
 import tn.esprit.spring.entities.Ville;
@@ -48,7 +48,7 @@ public class VoyageTest  {
          System.out.println(voyageq);
          Assertions.assertNotNull(voyageq);
      }*/
-  /*  @Test
+   @Test
     void testrecupererAll() {
 
         List<Voyage> voyages = new ArrayList();
@@ -90,4 +90,4 @@ public class VoyageTest  {
         verify(voyageRepository).deleteById(voyageq.getIdVoyage());
     } */
 
-//}
+}
