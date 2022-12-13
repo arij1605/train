@@ -1,6 +1,5 @@
 package tn.esprit.spring;
 
-import org.junit.jupiter.api.extension.ExtendWith;
 import tn.esprit.spring.entities.Train;
 import tn.esprit.spring.entities.etatTrain;
 import tn.esprit.spring.repository.TrainRepository;
@@ -8,16 +7,15 @@ import tn.esprit.spring.services.ITrainService;
 import tn.esprit.spring.services.TrainServiceImpl;
 
 
-import org.junit.Test;
-
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
-import static org.mockito.ArgumentMatchers.isA;
+
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.*;
 
@@ -43,15 +41,15 @@ public class TrainTest  {
     };
 
 
-   /*  @Test
-    void testRetrieveTrainByid() {
+    /*  @Test
+     void testRetrieveTrainByid() {
 
-        when(trainRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(train));
-        Train trainq = trainService.retrieveTrain(1L);
+         when(trainRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(train));
+         Train trainq = trainService.retrieveTrain(1L);
 
-        System.out.println(trainq);
-        Assertions.assertNotNull(trainq);
-    }*/
+         System.out.println(trainq);
+         Assertions.assertNotNull(trainq);
+     }*/
     @Test
     void testRetrieveAllTrain() {
 
