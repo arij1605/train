@@ -21,7 +21,7 @@ pipeline{
 				sh "mvn -version"
 			}
 		}
-        stage ("Suppression du dossier tareget + Copie du livrable dans le Repository local"){
+        stage ("Suppression du dossier tareget "){
 			steps{
 				sh "mvn clean "
 			}
