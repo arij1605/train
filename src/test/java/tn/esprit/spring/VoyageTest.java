@@ -1,4 +1,4 @@
-/*package tn.esprit.spring;
+package tn.esprit.spring;
 
 import tn.esprit.spring.entities.Voyage;
 import tn.esprit.spring.entities.Ville;
@@ -39,7 +39,7 @@ public class VoyageTest  {
     };
 
 
-    /*  @Test
+    /* @Test
      void testRetrieveVoyageByid() {
 
          when(voyageRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(voyage));
@@ -48,7 +48,7 @@ public class VoyageTest  {
          System.out.println(voyageq);
          Assertions.assertNotNull(voyageq);
      }*/
-   /* @Test
+    @Test
     void testrecupererAll() {
 
         List<Voyage> voyages = new ArrayList();
@@ -79,7 +79,7 @@ public class VoyageTest  {
     }
     
 
-   /*  @Test
+    /* @Test
     void testDeleteObject() {
         Voyage voyage = new Voyage();
         voyage.setLibelleVoyage("new test");
@@ -90,4 +90,4 @@ public class VoyageTest  {
         verify(voyageRepository).deleteById(voyageq.getIdVoyage());
     } */
 
-//}
+}

@@ -1,4 +1,4 @@
-/*package tn.esprit.spring;
+package tn.esprit.spring;
 
 import tn.esprit.spring.entities.Train;
 import tn.esprit.spring.entities.etatTrain;
@@ -50,7 +50,7 @@ public class TrainTest  {
          System.out.println(trainq);
          Assertions.assertNotNull(trainq);
      }*/
- /*   @Test
+    @Test
     void testRetrieveAllTrain() {
 
         List<Train> trains = new ArrayList();
@@ -92,4 +92,4 @@ public class TrainTest  {
         verify(trainRepository).deleteById(trainq.getIdTrain());
     } */
 
-//}
+}
