@@ -50,7 +50,7 @@ public class TrainTest  {
          System.out.println(trainq);
          Assertions.assertNotNull(trainq);
      }*/
-    @Test
+   /* @Test
     void testRetrieveAllTrain() {
 
         List<Train> trains = new ArrayList();
@@ -60,7 +60,7 @@ public class TrainTest  {
         Assertions.assertEquals(expected, trains);
         verify(trainRepository).findAll();
 
-    }
+    } */
 
 
 
